@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>J.A.R.V.I.S. | Agency AI</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="chat-container">
+      <div class="chat-header">
+        <div class="header-content">
+          <h1>J.A.R.V.I.S.</h1>
+          <p>Joint Agency Relational Voice & Intelligence Strategist</p>
+        </div>
+        <div class="header-actions">
+          <button class="btn-dark-mode" id="darkModeToggle" title="Toggle dark mode">
+            </button>
+          <button class="btn-clear" onclick="clearChat()">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor">
+              <path d="M5 5L15 15M15 5L5 15" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            Reboot
+          </button>
+        </div>
+      </div>
+
+      <div class="messages-container" id="messagesContainer">
+        <div class="message bot-message">
+          <div class="message-content">
+            <p>Greetings. I am <strong>J.A.R.V.I.S.</strong></p>
+            <p>I am online and successfully synced with the V3 Master Database.</p>
+            <p>Please select your target client from the console below. Once selected, I will load their Brand Guidelines, Target Avatars, and Service Architecture into my active memory.</p>
+            <p>How may I assist you today?</p>
+          </div>
+          <span class="message-time">System initialized</span>
+        </div>
+      </div>
+
+      <div class="input-section">
+        <div class="client-selector-container">
+          <label for="clientSelector">Active Client Context:</label>
+          <select id="clientSelector" class="client-select">
+            <option value="ORG-001">Pinder Plotkin LLC</option>
+            <!-- <option value="ORG-002">Demo Client 2</option> -->
+            </select>
+        </div>
+
+        <div class="input-group" id="inputGroup" style="display: flex">
+          <input
+            type="text"
+            id="messageInput"
+            placeholder="Input command..."
+            class="message-input"
+            onkeypress="handleKeyPress(event)"
+          />
+          <button class="btn-send" onclick="sendMessage()">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor">
+              <path d="M2 10L18 2L10 18L8 12L2 10Z" fill="currentColor" />
+            </svg>
+          </button>
+        </div>
+
+        <div id="loadingIndicator" class="loading-indicator" style="display: none">
+          <span class="spinner"></span>
+          <span>Accessing V3 Database...</span>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
