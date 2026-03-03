@@ -173,7 +173,7 @@ function clearChat() {
     <div class="message bot-message">
         <div class="message-content">
             <p>Greetings. I am <strong>J.A.R.V.I.S.</strong></p>
-            <p>I am online and successfully synced with the V3 Master Database.</p>
+            <p>I am online and successfully synced with the Master Database.</p>
             <p>Please select your target client from the console below. Once selected, I will load their Brand Guidelines, Target Avatars, and Service Architecture into my active memory.</p>
             <p>How may I assist you today?</p>
         </div>
